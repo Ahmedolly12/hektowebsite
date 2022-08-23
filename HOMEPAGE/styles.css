@@ -47,6 +47,11 @@
 li a {
   text-decoration: none;
 }
+li a:hover{
+  border-bottom: 2px solid #fb2e86;
+  color: #fb2e86;
+  font-size: 20px;
+}
 .logo a,
 h3 {
   font-size: 30px;
@@ -119,7 +124,10 @@ form.example button {
   margin-top: 1em;
   margin-bottom: 5em;
   cursor:pointer;
-  font-size:15px;
+  font-size:18px;
+}
+button:hover{
+  background-color: #151875;
 }
 .Ellipse{
   margin-top: 3em;
@@ -400,6 +408,9 @@ button.Add{
   border-radius: 3px;
   cursor: pointer;
 }
+button.Add:hover{
+  background-color: #151875;
+}
 .italian{
   display: flex;
   flex-direction: column;
@@ -594,8 +605,11 @@ button.shop-now{
   border-radius: 5px;
   color: white;
   border: none;
-  font-size:15px;
+  font-size:18px;
   cursor: pointer;
+}
+button.shop-now:hover{
+  background-color: #151875;
 }
 .top{
   display: flex;
@@ -759,6 +773,9 @@ footer{
   background-color:#EEEFFB;
   margin-top: 5em;
 }
+footer a:hover{
+  color:#000000;
+}
 .first, .second, .third, .fourth{
   display: flex;
   justify-content: center;
@@ -782,6 +799,8 @@ input.mail{
   padding: 10px;
  border: none;
  margin-bottom: 1em;
+  width: 50%;
+  font-size: 12px;
   
 }
 input.sign{
@@ -790,6 +809,8 @@ input.sign{
   padding: 10px;
   border: none;
   margin-bottom: 1em;
+  font-size: 12px;
+
 }
  p.heading{
   font-size: 18px;
