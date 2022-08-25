@@ -1,3 +1,5 @@
+/* DESKTOP SCREEN ~ DESKTOP VIEW */
+
 * {
   margin: 0;
   padding: 0;
@@ -56,7 +58,7 @@ li a:hover{
 h3 {
   font-size: 30px;
   text-decoration: none;
-  color: #000000;
+  color: #0D0E43;
 }
 span {
   color: #fb2e86;
@@ -79,6 +81,15 @@ form.example button {
   font-size: 17px;
   border: none;
   cursor: pointer;
+}
+.hamburger{
+  display:none;
+}
+.hamburger div{
+  width: 35px;
+  height: 5px;
+  background-color: black;
+  margin: 6px 0;
 }
 .about-us{
   background-color:#F6F5FF;
@@ -203,7 +214,7 @@ p.selina{
   font-size: 30px;
   color:#151875;
   text-align: center;
-  margin-top: 10px;5
+  margin-top: 10px;
 }
 p.web{
   text-align: center;
@@ -308,3 +319,150 @@ p.address{
 .foot-text{
   color: #9DA0AE;
 }
+
+/* MOBILE SCREEN / MOBILE VIEW */
+@media screen and (max-width: 768px) {
+body{
+    overflow-x: hidden;
+  }
+  .header-1 {
+    display:none;
+  }
+  .header-2{
+    justify-content: space-between;
+    padding: 5px;
+    background-color:#7E33E0;
+  }
+ h3{
+    padding-left:10px;
+  }
+  ul li a{
+    display:none;
+  }
+  form.example button{
+    width: auto;
+    font-size: 30px;
+    background:none;
+    color:black;
+  }
+  .hamburger{
+    display:block;
+  }
+  .hamburger div{
+    background-color:white;
+}
+.navbar ul{
+    gap: 0;
+  }
+  .fa-search{
+    padding-right: 10px;
+   
+    color: white;
+  }
+   input.search{
+    display:none;
+  }
+  .about-us{
+    display:none;
+  }
+  .ecommerce{
+  margin-top: 1em;
+  padding: 10px;
+  gap:0em;
+  text-align: center;
+  justify-content: center;
+  }
+.ecommerce-img{
+  display:none;
+}
+.ecommerce-text h3{
+  font-size: 20px;
+  padding:0;
+  margin:0;
+  width: auto;
+  line-height: 30px;
+}
+.ecommerce-text p{
+  width: auto;
+  margin-bottom:1em;
+  font-size:12px;
+}
+button.contact{
+margin-left: 7em;
+font-size: 15px;
+}
+.features-section h3{
+  margin-top: 1em;
+  font-size: 20px;
+}
+.features-container{
+  flex-direction: column;
+  gap:1em;
+  padding: 1em;
+}
+p.lorem{
+  font-weight: 100;
+  width: auto;
+  font-size: 12px;
+  padding:1em;
+}
+.carousel{
+  margin-top: 1em;
+}
+
+.testimonial-section h3{
+  font-size: 20px;
+  margin-top: 1em;
+}
+p.para{
+  font-size: 12px;
+}
+footer{
+  display: block;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1em;
+}
+.first h4{
+  padding: 10px;
+  margin:0;
+  font-size: 20px;
+}
+p.selina{
+  font-size: 20px;
+}
+p.web{
+  font-size: 12px;
+}
+footer .second{
+  margin-top: 1em;
+}
+.icons{
+  display: block;
+  flex-direction:column;
+}
+.foot-text p{
+  padding:1em;
+  text-align: center;
+  font-size: 10px;
+}
+p.address{
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+  font-size: 12px;
+}
+.first p{
+  font-size: 12px;
+  padding:0
+}
+p.heading{
+  padding:0;
+  font-size: 12px;
+}
+a.foot{
+  font-size: 12px;
+}
+}
+
