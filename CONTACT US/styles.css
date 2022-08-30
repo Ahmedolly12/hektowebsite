@@ -13,6 +13,10 @@
   align-items: center;
   padding: 1em;
   font-size: 15px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 100%;
 }
 .contact {
   display: flex;
@@ -34,12 +38,27 @@
   justify-content: space-evenly;
   align-items: center;
   padding: 1em;
+  position: fixed;
+  z-index: 1;
+  top: 50px;
+  width: 100%;
 }
-.navbar ul {
+select{
+  background: none;
+  color: white;
+  border: none;
+}
+option{
+  color: black;
+}
+.login p{
+  cursor: pointer;
+}
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 3em;
+  width: 40%;
   padding: 1em;
   list-style-type: none;
   text-decoration: none;
@@ -62,6 +81,19 @@ li a:hover{
   background-color: black;
   margin: 6px 0;
 }
+.navClose{
+  display: none;
+  color: white;
+}
+.close .hamburger1{
+  transform: rotate(-36deg) translate(-5px, 6px);
+}
+.close .hamburger2{
+  opacity: 0;
+}
+.close .hamburger3{
+  transform: rotate(45deg) translate(-5px, -6px);
+}
 .logo a,
 h3 {
   font-size: 30px;
@@ -70,6 +102,10 @@ h3 {
 }
 span {
   color: #fb2e86;
+}
+.homeDrownup{
+  color:#fb2e86;
+  font-size: 18px;
 }
 form.example input[type="text"] {
   padding: 3px;
@@ -99,6 +135,7 @@ form.example button {
   font-size: 35px;
   margin-bottom: 1em;
   padding-left: 5em;
+   padding-top: 2em;
 
 }
 .nav {
@@ -352,26 +389,46 @@ p.address{
   }
   .header-2{
     justify-content: space-between;
-    padding: 5px;
+    padding: 1em;
     background-color:#7E33E0;
+    position: relative;
+    top:0;
+  }
+  .navbar{
+    background-color: #7E33E0;
+    position: absolute;
+    top: 9vh;
+    right: 0;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+  }
+  .navlink{
+    left: -100px;
+    transition: all ease-out 0.2s;
+  }
+  ul.small-nav{
+    display:none;
   }
  h3{
     padding-left:10px;
   
   }
   ul li a{
-    display:none;
+    /* display:none; */
   }
   input.search{
     display:none;
   }
+  form.example input[type="text"]{
+  display: none;
+}
   form.example button{
     width: auto;
     font-size: 30px;
     background:none;
     color:black
   }
- 
   .contact-us{
   display: none;
   }
@@ -391,6 +448,10 @@ p.address{
     padding-right: 10px;
     font-size: 10px;
     color: white;
+  }
+  .hero-section{
+    padding: 0;
+    margin: 0;
   }
   .section-1 {
     padding: 12px;

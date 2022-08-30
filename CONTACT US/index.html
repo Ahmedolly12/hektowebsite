@@ -25,10 +25,30 @@
 
              <div class="profile">
                 <div class="lang">
-                    <p>English <img src="./contact_asset/drop.png"></p>
+                        <select name="language" id="language">
+                            <option value="English">English</option>
+                            <option value="Chinese">Chinese</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="French">French</option>
+                            <option value="Indonesia">Indonesian</option>
+                            <option value="Arabic">Arabic</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Portuguese">Portuguese</option>
+                            <option value="Dutch">Dutch</option>
+                        </select>
                 </div>
                 <div class="usd">
-                      <p>USD <img src="./contact_asset/drop.png"></p>
+                        <select name="currency" id="currency">
+                            <option value="USD">USD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="NGN">NGN</option>
+                            <option value="EUR">EUR</option>
+                            <option value="CAD">CAD</option>
+                            <option value="AUD">AUD</option>
+                            <option value="JPY">JPY</option>
+                            <option value="CHF">CHF</option>
+                            <option value="NZD">NZD</option>
+                        </select>
                 </div>
                     <div class="login">
                           <p>Login<img src="./contact_asset/profile.png"></p>
@@ -47,18 +67,24 @@
             <div class="logo">
                 <a href="/HOMEPAGE/index.html"><h3>Hekto</h3></a>
             </div>
-            <div class="navbar">
-                <ul>
-                    <li><a href="/HOMEPAGE/index.html"><span>Home<img src="./contact_asset/pinkdropdown.png"></span></a></li>
+
+             <ul class="navbar" >
+                    <li><a href="#">   
+                         <select class="homeDrownup" name="" id="">
+                            <option value=""><a href="">Home</a></option>
+                            <option value=""><a href="">shopping Cart</a></option>
+                            <option value=""><a href="/ABOUT US/index.html">About us</a></option>
+                            <option value=""><a href="">Discount item</a></option>
+                           </select>
+                 </a> 
+                    </li>
                     <li><a href="#">Pages</a></li>
                     <li><a href="#">Product</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Shop</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <form class="example" action="/action_page.php">
-                        <input class="search" type="text" placeholder="" name="search">
-                        <button class="search"type="submit"><i class="fa fa-search"></i></button>
-                    </form>
+                    <li><a href="/CONTACT US/index.html">Contact</a></li>
+                </ul>
+                
                     <div class="hamburger">
                         <div></div>
                         <div></div>
@@ -133,19 +159,19 @@
         <div class="form-section">
             <h4>Get In Touch</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis neque ultrices  tristique amet erat vitae eget dolor los vitae lobortis quis bibendum quam.</p>
-            <form class="form-to-fill" action="#">
+            <form id="form" class="form-to-fill" action="#" name="myForm" onsubmit="return validateForm()"method="post">
                 <label for="Name">
-                    <input class="name"type="text" placeholder="Your Name">
-                    <input class="email"type="email" placeholder="Email">
+                    <input class="name"type="text" placeholder="Your Name" id="fname">
+                    <input class="email"type="email" placeholder="Email" id="email">
                 </label>
                 <br>
                 <label for="Subject">
-                    <input class="subject" type="text"placeholder="Subject">
+                    <input class="subject" type="text"placeholder="Subject" id="subject">
                 </label>
                 <br>
-                <textarea name="" id="" cols="30" rows="10"placeholder="Type your Message here..."></textarea>
+                <textarea name="" id="textarea" cols="30" rows="10"placeholder="Type your Message here..."></textarea>
                 <br>
-                <input type="Submit"value="Send Mail">
+                <input type="Submit"value="Send Mail"onsubmit="return validateForm()">
             </form>
         </div>
         <div class="image-section">
@@ -192,5 +218,6 @@
                      <a href="#"><img class="fb-background"src="./contact_asset/twitter.png"></a>
                 </div>
             </div>
+    <script src="/CONTACT US/script.js"></script>
     </body>
 </html>

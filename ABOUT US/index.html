@@ -25,10 +25,30 @@
 
              <div class="profile">
                 <div class="lang">
-                    <p>English <img src="./about_asset/drop.png"></p>
+                        <select name="language" id="language">
+                            <option value="English">English</option>
+                            <option value="Chinese">Chinese</option>
+                            <option value="Japanese">Japanese</option>
+                            <option value="French">French</option>
+                            <option value="Indonesia">Indonesian</option>
+                            <option value="Arabic">Arabic</option>
+                            <option value="Hindi">Hindi</option>
+                            <option value="Portuguese">Portuguese</option>
+                            <option value="Dutch">Dutch</option>
+                        </select>
                 </div>
                 <div class="usd">
-                      <p>USD <img src="./about_asset/drop.png"></p>
+                        <select name="currency" id="currency">
+                            <option value="USD">USD</option>
+                            <option value="GBP">GBP</option>
+                            <option value="NGN">NGN</option>
+                            <option value="EUR">EUR</option>
+                            <option value="CAD">CAD</option>
+                            <option value="AUD">AUD</option>
+                            <option value="JPY">JPY</option>
+                            <option value="CHF">CHF</option>
+                            <option value="NZD">NZD</option>
+                        </select>
                 </div>
                     <div class="login">
                           <p>Login<img src="./about_asset/profile.png"></p>
@@ -47,18 +67,23 @@
             <div class="logo">
                 <a href="/HOMEPAGE/index.html"><h3>Hekto</h3></a>
             </div>
-            <div class="navbar">
-                <ul>
-                    <li><a href=""><span>Home<img src="./about_asset/pinkdropdown.png"></span></a></li>
+            <ul class="navbar" >
+                    <li><a href="#">   
+                         <select class="homeDrownup" name="" id="">
+                            <option value=""><a href="">Home</a></option>
+                            <option value=""><a href="">shopping Cart</a></option>
+                            <option value=""><a href="/ABOUT US/index.html">About us</a></option>
+                            <option value=""><a href="">Discount item</a></option>
+                           </select>
+                 </a> 
+                    </li>
                     <li><a href="#">Pages</a></li>
                     <li><a href="#">Product</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Shop</a></li>
                     <li><a href="/CONTACT US/index.html">Contact</a></li>
-                    <form class="example" action="/action_page.php">
-                        <input class="search" type="text" placeholder="" name="search">
-                        <button type="submit"><i class="fa fa-search"></i></button>
-                    </form>
+                </ul>
+                
                     <div class="hamburger">
                         <div></div>
                         <div></div>
@@ -166,5 +191,6 @@
                      <a href="#"><img class="fb-background"src="./about_asset/twitter.png"></a>
                 </div>
             </div>
+    <script src="/ABOUT US/script.js"></script>
 </body>
 </html>
