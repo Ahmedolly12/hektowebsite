@@ -389,11 +389,7 @@ p.address{
   }
  h3{
     padding-left:10px;
-  
-  }
-  ul li a{
-    /* display:none; */
-  }
+ }
   input.search{
     display:none;
   }
