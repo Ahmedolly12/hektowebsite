@@ -6,33 +6,66 @@
         hamburger.classList.toggle('close')
     })
 
+let fname= document.getElementById("fname");
+let email = document.getElementById("email");
+let subject= document.getElementById("subject");
+let textArea= document.getElementById("textarea");
+let submit= document.getElementById('submit');
 
-
-
-
-const fname= document.getElementById("fname");
-const email = document.getElementById("email");
-const subject= document.getElementById("subject");
-const textArea= document.getElementById("textarea");
-
-fname.addEventListener('keyup', () => {
-    if (fname === 0 || fname==="" ){
-        alert("Name must be filled out correctly")
-        // return false;
+// fname= fname.addEventListener('keyup', () =>{
+//     if(firstname===0 || fname)
+// })
+ let fname = fname.addEventListener('keyup',() =>{
+    let fullName = document.getElementById('FullName').value;    
+    if (fullName.length ==   0){
+        errorName.innerHTML = 'name cannot be empty'
+        return false
+    } 
+    if (!fullName.match(/^[A-Za-z]\s{1}[A-Za-z]$/)){
+        errorName.innerHTML = 'write full name';
+        return false
+    }else
+     errorName.innerHTML = 'correct'
+    return true
+    
+} )
+let mail = Email.addEventListener('keyup',() =>{
+        let Email = document.getElementById('Email').value;
+           
+           if (Email.length == 0){
+               errorEmail.innerHTML = 'Email is required'
+               return false
+               } 
+               if (!Email.match(/^[A-Za-z\._\-[0-9][@][A-Za-z][\.][a-z]{2,4}$/)){
+                   errorEmail.innerHTML = 'Email Invalid';
+                   return false
+               }
+               errorEmail.innerHTML = 'correct';
+               return true
+ })
+let textContent = textArea.addEventListener('keyup',() =>{
+        let textArea = document.getElementById('textarea').value;
+        let required = 250;
+        let left = required - textArea.length;
+           
+           if (left > 0){
+               errorTextArea.innerHTML = left    +   ' more characters is required'
+               return false
+               } 
+               if( left > 250){
+                errorTextArea.innerHTML = left + ' number exceeeded'
+                return false
+               }
+               errorTextArea.innerHTML = 'correct';
+            return true
+ })
+        
+ submitButton.addEventListener('click', () =>{
+    let submitButton = document.getElementById('submit')
+    if(!fName || !mail || !textContent ){
+        errorSubmit.style.display ='block'
+        errorSubmit.innerHTML ='Please fix error to submit';
+        setTimeout(function(){ errorSubmit.style.display ='none', 5000;})
+        return false;
     }
-})
-
-// hamburger.addEventListener('click', () => {
-// form.addEventListener('submit', e => {
-//     e.preventDefault();
-
-//     validateInputs();
-// });
-
-// const validateInputs= () => {
-//     const nameValue= username.value.trim();
-//     const emailValue= username.value.trim();
-//     const subjectValue= username.value.trim();
-//     const textAreaValue= username.value.trim();
-
-// }
+ })

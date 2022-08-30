@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
     <script src="https://use.fontawesome.com/9fd52299a6.js"></script>
      <link rel="icon" type="image/x-icon" href="./contact_asset/favicon.JPG">
 </head>
@@ -68,12 +68,12 @@
                 <a href="/HOMEPAGE/index.html"><h3>Hekto</h3></a>
             </div>
 
-             <ul class="navbar" >
+              <ul class="navbar" >
                     <li><a href="#">   
                          <select class="homeDrownup" name="" id="">
                             <option value=""><a href="">Home</a></option>
                             <option value=""><a href="">shopping Cart</a></option>
-                            <option value=""><a href="/ABOUT US/index.html">About us</a></option>
+                            <option value=""><a href="/ABOUT US/about.html">About us</a></option>
                             <option value=""><a href="">Discount item</a></option>
                            </select>
                  </a> 
@@ -82,16 +82,18 @@
                     <li><a href="#">Product</a></li>
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Shop</a></li>
-                    <li><a href="/CONTACT US/index.html">Contact</a></li>
+                    <li><a href="/CONTACT US/contact.html">Contact</a></li>
                 </ul>
                 
-                    <div class="hamburger">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </ul>
-            </div>
+                <div class="hamburger">
+                    <div class="hamburger1"></div>
+                    <div class="hamburger2"></div>
+                    <div class="hamburger3"></div>
+                </div>
+            <form class="example" action="/action_page.php">
+                        <input type="text" placeholder="" name="search">
+                        <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
         </div>
     </header>
     <div class="contact-us">
@@ -99,7 +101,7 @@
         <div class="nav">
             <a href="#">Home .</a>
             <a href="#">Pages .</a>
-            <a class="about" href="/ABOUT US/index.html">About Us</a>
+            <a class="about" href="/ABOUT US/about.html">About Us</a>
         </div>
     </div>
         <div class="section-1">
@@ -171,7 +173,7 @@
                 <br>
                 <textarea name="" id="textarea" cols="30" rows="10"placeholder="Type your Message here..."></textarea>
                 <br>
-                <input type="Submit"value="Send Mail"onsubmit="return validateForm()">
+                <input type="Submit"value="Send Mail"id="submit">
             </form>
         </div>
         <div class="image-section">
@@ -218,6 +220,6 @@
                      <a href="#"><img class="fb-background"src="./contact_asset/twitter.png"></a>
                 </div>
             </div>
-    <script src="/CONTACT US/script.js"></script>
+    <script src="/CONTACT US/contact.js"></script>
     </body>
 </html>
