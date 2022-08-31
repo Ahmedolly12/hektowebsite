@@ -18,6 +18,9 @@
   top: 0;
   width: 100%;
 }
+small{
+  display:none;
+}
 .contact {
   display: flex;
   justify-content: space-around;

@@ -163,17 +163,17 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis neque ultrices  tristique amet erat vitae eget dolor los vitae lobortis quis bibendum quam.</p>
             <form id="form" class="form-to-fill" action="#" name="myForm" onsubmit="return validateForm()"method="post">
                 <label for="Name">
-                    <input class="name"type="text" placeholder="Your Name" id="fname">
-                    <input class="email"type="email" placeholder="Email" id="email">
+                    <input class="name"type="text" placeholder="Your Name" name="firstname">
+                    <input class="email"type="email" placeholder="Email" name="email">
                 </label>
                 <br>
                 <label for="Subject">
-                    <input class="subject" type="text"placeholder="Subject" id="subject">
+                    <input class="subject" type="text"placeholder="Subject" name="subject">
                 </label>
                 <br>
-                <textarea name="" id="textarea" cols="30" rows="10"placeholder="Type your Message here..."></textarea>
+                <textarea name="textarea" id="textarea" cols="30" rows="10"placeholder="Type your Message here..."></textarea>
                 <br>
-                <input type="Submit"value="Send Mail"id="submit">
+                <input type="Submit"value="Send Mail"name="submit">
             </form>
         </div>
         <div class="image-section">
@@ -220,6 +220,6 @@
                      <a href="#"><img class="fb-background"src="./contact_asset/twitter.png"></a>
                 </div>
             </div>
-    <script src="/CONTACT US/contact.js"></script>
+    <script src="contact.js"></script>
     </body>
 </html>

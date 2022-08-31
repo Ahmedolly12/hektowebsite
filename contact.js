@@ -6,66 +6,159 @@
         hamburger.classList.toggle('close')
     })
 
-let fname= document.getElementById("fname");
-let email = document.getElementById("email");
-let subject= document.getElementById("subject");
-let textArea= document.getElementById("textarea");
-let submit= document.getElementById('submit');
+  function validateForm() {
+  let firstName = document.forms["myForm"]["firstname"].value;
+  if (firstName == "") {
+    alert("Single name should be provided and must not contain a number");
+    return false;
+  }
+}
+function validateForm() {
+  let email = document.forms["myForm"]["email"].value;
+  if (email == "") {
+    alert("Email must be filled out correctly");
+    return false;
+  }
+}
+// function validateForm() {
+//   let subject = document.forms["myForm"]["subject"].value;
+//   if (subject == "") {
+//     alert("subject should not be more than 10 words and must not contain a number");
+//     return false;
+//   }
+// }
+// function validateForm() {
+//   let textContent = document.forms["myForm"]["textarea"].value;
+//   if (textarea == "") {
+//     alert("the text should not be less than 50 words ");
+//     return false;
+//   }
+// }
 
-// fname= fname.addEventListener('keyup', () =>{
-//     if(firstname===0 || fname)
-// })
- let fname = fname.addEventListener('keyup',() =>{
-    let fullName = document.getElementById('FullName').value;    
-    if (fullName.length ==   0){
-        errorName.innerHTML = 'name cannot be empty'
-        return false
-    } 
-    if (!fullName.match(/^[A-Za-z]\s{1}[A-Za-z]$/)){
-        errorName.innerHTML = 'write full name';
-        return false
-    }else
-     errorName.innerHTML = 'correct'
-    return true
+// function validateForm() {
+//   let submit = document.forms["myForm"]["submit"].value;
+//   if (submit == "") {
+//     alert("the text should not be less than 50 words ");
+//     return false;
+//   }
+// }
+
+
+
+
+
+
+
+
+
+
+
+  // function validateForm(){
+
+  //   let firstName= document.forms.myForm.firstname.value;
+  //   let email= document.forms.myForm.email.value;
+  //   let subject= document.forms.myForm.subject.value;
+  //   let textContent= document.forms.myForm.textarea.value;
+  // }
+  // if (firstname===""){
+  //   alert("Please enter your name properly");
+  //   firstname.focus
+  //   return false;
+  // }
+  // if (subject===""){
+  //   alert("Please enter a subject not less than 10 words");
+  //   firstname.focus
+  //   return false;
+  // }
+
+
+// const firstName = document.getElementById('firstName');
+// const email = document.getElementById('email');
+// const subject= document.getElementById('subject');
+// const textArea= document.getElementById('textarea')
+// const submit= document.getElementById('submit')
+// const form = document.getElementById('form');
+
+// submit.disabled = true;
+
+// const validateFirstName = () => {
     
-} )
-let mail = Email.addEventListener('keyup',() =>{
-        let Email = document.getElementById('Email').value;
-           
-           if (Email.length == 0){
-               errorEmail.innerHTML = 'Email is required'
-               return false
-               } 
-               if (!Email.match(/^[A-Za-z\._\-[0-9][@][A-Za-z][\.][a-z]{2,4}$/)){
-                   errorEmail.innerHTML = 'Email Invalid';
-                   return false
-               }
-               errorEmail.innerHTML = 'correct';
-               return true
- })
-let textContent = textArea.addEventListener('keyup',() =>{
-        let textArea = document.getElementById('textarea').value;
-        let required = 250;
-        let left = required - textArea.length;
-           
-           if (left > 0){
-               errorTextArea.innerHTML = left    +   ' more characters is required'
-               return false
-               } 
-               if( left > 250){
-                errorTextArea.innerHTML = left + ' number exceeeded'
-                return false
-               }
-               errorTextArea.innerHTML = 'correct';
-            return true
- })
+//     const firstNameValue = firstName.value.trim();
+    
+//     if (firstNameValue == '') {
+//         errorMessage(
+//           firstName,
+//           'Name cannot be blank  (Name can accept any character except numbers)'
+//         );
         
- submitButton.addEventListener('click', () =>{
-    let submitButton = document.getElementById('submit')
-    if(!fName || !mail || !textContent ){
-        errorSubmit.style.display ='block'
-        errorSubmit.innerHTML ='Please fix error to submit';
-        setTimeout(function(){ errorSubmit.style.display ='none', 5000;})
-        return false;
-    }
- })
+//     } else if (isValidName(firstNameValue)) {
+//         errorMessage(firstName, 'Name accept any character except numbers');
+//     } else {
+//         success(firstName);
+//     }
+// }
+
+// const validateEmail = () => {
+
+//     const emailValue = email.value.trim();
+    
+//     if (emailValue == '') {
+//         errorMessage(email, 'Email cannot be blank');
+//     } else if (!isEmail(emailValue)) {
+//       errorMessage(email, 'Not a valid Email')
+//     } else {
+//       success(email);
+//     }
+// }
+
+// const validatetextArea = () =>{ 
+//   const textAreaValue = textArea.value.trim ();
+//   if ( textAreavalue < 50 ){
+//     errorMessage(textArea, 'Write up to 50 words');
+//   }else{
+//     success(textArea);
+//   }
+// }
+
+
+// const errorMessage = (input, message) => {
+//     const formControl = input.parentElement;
+//     const small = formControl.querySelector('small');
+//     formControl.className = 'form-control error';
+//     small.innerText = message;
+// }
+// const success = (input) => {
+//   const formControl = input.parentElement;
+//   formControl.className = 'form-control success';
+// }
+
+// const isEmail = (email) => {
+//   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+//     email
+//   )
+// }
+
+// const isValidName = (name) => {
+//     let regEx = /\d|\d[^0-9]|[^0-9]\d/gi
+//     return name.match(regEx);
+// }
+
+// let firstValidation = firstName.addEventListener('blur', (e) => {
+//   e.preventDefault()
+//   validateFirstName()
+// })
+
+// submit.addEventListener('click', (e) => {
+//   e.preventDefault();
+//   addLoader()
+// })
+
+// if (
+//   firstValidation &&
+//   secondValidation &&
+//   thirdValidation &&
+//   forthValidation &&
+//   fifthValidation
+// ) {
+//   submit.disabled = true
+// }
