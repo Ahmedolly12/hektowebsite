@@ -75,27 +75,58 @@ li a:hover{
   color: #fb2e86;
   font-size: 20px;
 }
-.hamburger{
+.hamburger-icon{
   display:none;
+  margin:auto;
+  cursor: pointer;
+  margin-right: 1em;
 }
-.hamburger div{
+.hamburger-icon div{
   width: 35px;
-  height: 5px;
-  background-color: black;
+  height: 3px;
+  background-color: white;
   margin: 6px 0;
+  transition: 0.4s;
 }
-.navClose{
+.navopen{
   display: none;
-  color: white;
+  color: white; 
 }
-.close .hamburger1{
-  transform: rotate(-36deg) translate(-5px, 6px);
+.open .hamburger1{
+  -webkit-transform: rotate (-45deg) translate (-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
 }
-.close .hamburger2{
+.open .hamburger2{
   opacity: 0;
 }
-.close .hamburger3{
-  transform: rotate(45deg) translate(-5px, -6px);
+.open .hamburger3{
+  -webkit-transform: rotate (45deg) translate (-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+.open .mobile-menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  
+}
+.mobile-menu{
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh -50px);
+  width: 100%;
+  justify-content: center;
+}
+ li.navlink-mobile  {
+  color: white;
+  padding: 20px;
+  font-size: 18px;
+  list-style-type: none;
+}
+a.link{
+  color: white;
 }
 .logo a,
 h3 {
@@ -405,6 +436,7 @@ p.address{
     color: #fff;
     display: flex;
     flex-direction: column;
+    display:none;
   }
   .navlink{
     left: -100px;
@@ -429,6 +461,16 @@ p.address{
     background:none;
     color:black
   }
+  button.fa{
+    padding-right: 10px;
+    font-size: 10px;
+    color: white;
+    font-size: 1px;
+    display: none;
+  }
+   .hamburger-icon{
+    display:block;
+  }
   .contact-us{
   display: none;
   }
@@ -441,9 +483,10 @@ p.address{
   .hamburger div{
     background-color:white;
   }
-  .navbar ul{
+  /* .navbar ul{
     gap: 0;
-  }
+    display: none;
+  } */
   .fa-search{
     padding-right: 10px;
     font-size: 10px;

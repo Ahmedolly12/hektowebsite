@@ -27,12 +27,6 @@
   gap: 3em;
   color: white;
 }
-/* .navbar{
-  justify-content: center;
-} */
-/* .navbar li .dropdown1{
-  display: none;
-} */
 .profile {
   display: flex;
   justify-content: space-between;
@@ -50,6 +44,9 @@
   z-index: 1;
   top: 50px;
   width: 100%;
+}
+h4.quality{
+  color: #FB2E86;
 }
 select{
   background: none;
@@ -103,29 +100,61 @@ li a:hover{
   justify-content:center;
   
 }
-.hamburger{
+.hamburger-icon{
   display:none;
-  margin-left: 11rem;
+  margin:auto;
+  cursor: pointer;
+  margin-right: 1em;
 }
-.hamburger div{
-  width: 25px;
+.hamburger-icon div{
+  width: 35px;
   height: 3px;
-  background-color: black;
-  margin: 5px ;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
 }
-.navClose{
+.navopen{
   display: none;
-  color: white;
+  color: white; 
 }
-.close .hamburger1{
-  transform: rotate(-36deg) translate(-5px, 6px);
+.open .hamburger1{
+  -webkit-transform: rotate (-45deg) translate (-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
 }
-.close .hamburger2{
+.open .hamburger2{
   opacity: 0;
 }
-.close .hamburger3{
-  transform: rotate(45deg) translate(-5px, -6px);
+.open .hamburger3{
+  -webkit-transform: rotate (45deg) translate (-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
 }
+.open .mobile-menu{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  
+}
+.mobile-menu{
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh -50px);
+  width: 100%;
+  justify-content: center;
+  
+}
+ li.navlink-mobile  {
+  color: white;
+  padding: 20px;
+  font-size: 18px;
+  list-style-type: none;
+}
+a.link{
+  color: white;
+}
+
 .logo a,
 h3 {
   font-size: 30px;
@@ -142,8 +171,6 @@ span.home{
   color:#fb2e86;
   font-size: 18px;
 }
-
-
 form.example input[type="text"] {
   padding: 3px;
   font-size: 17px;
@@ -170,6 +197,99 @@ form.example button {
   padding-left: 2em;
   padding-right: 2em;
 }
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  padding-bottom: 2em;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The quadrilateral/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  border-radius: 10%;
+  border: 1px solid  #FB2E86;
+  display: inline-block;
+  -webkit-transform: rotate(-45deg);
+}
+.active, .dot:hover {
+  background-color: #FB2E86;
+}
+.circle{
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  margin: 0 2px;
+  border-radius: 50%;
+  border: 1px solid  #FB2E86;
+  display: inline-block;
+  /* padding-bottom: 2em; */
+}
+.active, .circle:hover {
+  background-color: #FB2E86;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
 .hero-text {
   padding-top: 12em;
 }
@@ -270,16 +390,16 @@ button:hover{
   background-color:#F6F7FB
 }
 .chair1:hover{
-  background-color:blue;
+  background-color:#2F1AC4;
 }
 .chair2:hover{
-  background-color:blue;
+  background-color:#2F1AC4;
 }
 .chair3:hover{
-  background-color:blue;
+  background-color:#2F1AC4;
 }
 .chair4:hover{
-  background-color:blue;
+  background-color:#2F1AC4;
 }
 .cant{
   margin:5px;
@@ -451,7 +571,7 @@ p.lorem{
   width: 60%;
   padding-left: 10em;
 }
-.text{
+.text-unique{
   padding-top: 0;
   margin-top: 0;
 }
@@ -748,6 +868,7 @@ button.shop-now:hover{
   position: relative;
   text-align: center;
   color:#151875;
+  margin-top: 2em;
 }
 .image-container img{
   max-width: 100%;
@@ -888,7 +1009,7 @@ input.sign{
 }
  p.heading{
   font-size: 18px;
-  padding-top: 2em;
+  /* padding-top: 2em; */
   font-weight: 700;
 }
 p.address{
@@ -931,28 +1052,24 @@ p.address{
     position: relative;
     top:0;
   }
-  .navbar{
-    background-color: #7E33E0;
-    position: absolute;
-    top: 9vh;
-    right: 0;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
+  .dot{
+    width: 10px;
+    height: 10px;
   }
-  .navlink{
-    left: -100px;
-    transition: all ease-out 0.2s;
+  .navbar{
+    display: none;
   }
   ul.small-nav{
     display:none;
   }
  h3{
     padding-left:10px;
-  
   }
   input.search{
     display:none;
+  }
+  .trending-product{
+    padding: 0;
   }
   form.example input[type="text"]{
   display: none;
@@ -969,20 +1086,20 @@ p.address{
   .image-section{
     display:none;
   }
-  .hamburger{
+  .hamburger-icon{
     display:block;
-  }
-  .hamburger div{
-    background-color:white;
   }
   .navbar ul{
     gap: 0;
   }
-  .fa-search{
+  button.fa{
     padding-right: 10px;
     font-size: 10px;
     color: white;
+    font-size: 1px;
+    display: none;
   }
+  
   .hero-section{
     padding: 0;
     margin: 0;
@@ -1074,8 +1191,9 @@ p.address{
   gap: 1em;
 }
 .off{
-  margin: 0em;
+  margin: 1em;
   background: none;
+  display: none;
 }
 
 .cart{
@@ -1144,6 +1262,8 @@ p.address{
 }
 p.heading{
   font-size: 12px;
+  padding: 0px;
+  margin: 0px;
 }
 a.foot{
   font-size: 12px;

@@ -1,7 +1,7 @@
-let hamburger = document.querySelector('.hamburger')
-    let navBar = document.querySelector('.navbar') 
+let hamburger = document.querySelector('.hamburger-icon')
+    let mobileMenu = document.querySelector('.mobile-menu') 
     
-    hamburger.addEventListener('click', () => {
-        navBar.classList.toggle('navlink')
-        hamburger.classList.toggle('close')
-    })
+    hamburger.addEventListener ('click', () => {
+        mobileMenu.classList.toggle('mobile-menu')
+        hamburger.classList.toggle('open').style.width = "100%";
+    }) 
